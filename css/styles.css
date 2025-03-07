@@ -879,12 +879,11 @@ footer {
     }
 
     .nav-links {
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 90px;
         right: 0;
-        left: 0;
         background-color: white;
-        width: 100vw;
+        width: 100%;
         padding: 0;
         margin: 0;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -904,13 +903,13 @@ footer {
         opacity: 1;
         visibility: visible;
     }
-
     .nav-links li {
         margin: 0;
-        padding: 15px;
+        padding: 15px 0;
         width: 100%;
         text-align: center;
         border-bottom: 1px solid rgba(0,0,0,0.05);
+        box-sizing: border-box;
     }
 
     .nav-links li:last-child {
@@ -922,6 +921,8 @@ footer {
         padding: 10px;
         font-size: 1.2rem;
         color: #E60000;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .mobile-menu-btn {
