@@ -191,7 +191,7 @@ nav ul li a:hover::after {
 
 /* Hero Section Styles */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1607400201515-c2c41c07d307') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/image0.jpeg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
