@@ -13,9 +13,16 @@
     <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon.jpg">
     <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon.jpg">
     <link rel="apple-touch-icon" href="images/favicon.jpg">
-16|    <meta name="theme-color" content="#cc0000">
+    <meta name="theme-color" content="#cc0000">
     <link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet'>
-17|</head>
+    <!-- EmailJS Integration -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("YOUR_USER_ID"); // Replace with your actual EmailJS user ID
+        })();
+    </script>
+</head>
 <body>
     <!-- Header -->
     <header id="header">
@@ -62,7 +69,7 @@
             <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">About Us</h2>
             <div class="about-content">
                 <div class="about-form">
-                    <form class="about-contact-form" action="mailto:lbarten15@gmail.com" method="post" enctype="text/plain">
+                    <form id="contactForm" class="about-contact-form" onsubmit="return sendMail(event)">
                         <h3>Get Your Free Quote</h3>
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
@@ -254,7 +261,7 @@
     <!-- Contact Section -->
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div class="container" id="contact">
             <div class="footer-content">
                 <div class="footer-logo">
                     <h3>Mike's Epoxy Floors</h3>

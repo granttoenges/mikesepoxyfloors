@@ -60,4 +60,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
+// EmailJS form submission function
+function sendMail(event) {
+    event.preventDefault();
+    
+    const form = document.getElementById('contactForm');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    
+    // Change button text to show processing
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    
+    // Prepare template parameters from form data
+    const templateParams = {
+        name: form.elements.name.value,
+        email: form.elements.email.value,
+        phone: form.elements.phone.value,
+        project_type: form.elements.project_type.value,
+        project_details: form.elements.project_details.value
+    };
+    
+    // Send email using EmailJS
+    emailjs.send('default_service', 'template_id', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Your quote request has been sent successfully! We will contact you soon.');
+            form.reset();
+        }, function(error) {
+            console.log('FAILED...', error);
+            alert('Sorry, there was an error sending your request. Please try again or contact us directly.');
+        })
+        .finally(function() {
+            // Reset button state
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+        });
+    
+    return false;
+}
