@@ -61,25 +61,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 //send email function
-document.getElementById("contactForm").addEventListener("submit", async function (event) {
-    event.preventDefault();
+async function sendMail(event) {
+    event.preventDefault();  // Prevent default form submission
 
     const formData = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
+        name: document.querySelector("input[name='name']").value,
+        email: document.querySelector("input[name='email']").value,
+        phone: document.querySelector("input[name='phone']").value,
+        project_type: document.querySelector("select[name='project_type']").value,
+        project_details: document.querySelector("textarea[name='project_details']").value
     };
 
     try {
-        const response = await fetch("https://0s65sb5v7c.execute-api.us-east-1.amazonaws.com", {
+        const response = await fetch("https://your-api-gateway-url/prod/send-email", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
         });
 
         const data = await response.json();
-        alert(data.message);
+        alert(data.message);  // Show success or error message
     } catch (error) {
         console.error("Error sending email:", error);
+        alert("Failed to send email. Please try again.");
     }
-});
+}
+
