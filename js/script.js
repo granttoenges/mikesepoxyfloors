@@ -73,7 +73,7 @@ async function sendMail(event) {
     };
 
     try {
-        const response = await fetch("https://your-api-gateway-url/prod/send-email", {
+        const response = await fetch("https://0s65sb5v7c.execute-api.us-east-1.amazonaws.com", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
