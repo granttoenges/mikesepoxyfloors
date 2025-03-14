@@ -61,15 +61,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 //send email function
-async function sendMail(event) {
-    event.preventDefault();  // Prevent default form submission
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
+    event.preventDefault();  // Prevent form submission reload
 
+    // Get form data
     const formData = {
-        name: document.querySelector("input[name='name']").value,
-        email: document.querySelector("input[name='email']").value,
-        phone: document.querySelector("input[name='phone']").value,
-        project_type: document.querySelector("select[name='project_type']").value,
-        project_details: document.querySelector("textarea[name='project_details']").value
+        name: document.querySelector("[name='name']").value,
+        email: document.querySelector("[name='email']").value,
+        phone: document.querySelector("[name='phone']").value,
+        project_type: document.querySelector("[name='project_type']").value,
+        project_details: document.querySelector("[name='project_details']").value
     };
 
     try {
@@ -79,11 +80,17 @@ async function sendMail(event) {
             body: JSON.stringify(formData)
         });
 
-        const data = await response.json();
-        alert(data.message);  // Show success or error message
+        const responseData = await response.json();
+        
+        if (response.ok) {
+            alert("Email sent successfully!");
+        } else {
+            alert("Error: " + responseData.message);
+        }
     } catch (error) {
-        console.error("Error sending email:", error);
-        alert("Failed to send email. Please try again.");
+        console.error("Error sending request:", error);
+        alert("Failed to send email.");
     }
-}
+});
+
 
