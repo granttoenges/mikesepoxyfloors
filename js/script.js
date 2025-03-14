@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 //send email function
-document.getElementById("contactForm").addEventListener("submit", async function(event) {
-    event.preventDefault();  // Prevent form submission reload
+async function sendMail(event) {
+    event.preventDefault();  // Prevent default form submission
 
     // Get form data
     const formData = {
@@ -91,6 +91,6 @@ document.getElementById("contactForm").addEventListener("submit", async function
         console.error("Error sending request:", error);
         alert("Failed to send email.");
     }
-});
+}
 
 
