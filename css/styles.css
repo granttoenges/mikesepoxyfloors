@@ -58,23 +58,25 @@ img {
 }
 
 .btn {
-    display: inline-block;
-    background-color: #E60000;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 4px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.16);
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #CC0000;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(230, 0, 0, 0.18);
+    filter: brightness(1.02);
 }
 
 section {
