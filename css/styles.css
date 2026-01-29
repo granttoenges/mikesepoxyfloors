@@ -788,11 +788,12 @@ footer {
 }
 
 .footer-contact h3 {
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    color: white;
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.92);
     position: relative;
     padding-bottom: 10px;
+    letter-spacing: -0.01em;
 }
 
 .footer-contact h3::after {
