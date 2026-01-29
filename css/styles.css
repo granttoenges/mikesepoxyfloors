@@ -723,9 +723,9 @@ textarea {
 
 /* Footer Styles */
 footer {
-    background-color: #CC0000;
-    color: white;
-    padding: 40px 0;
+    background: #111112;
+    color: rgba(255, 255, 255, 0.92);
+    padding: 56px 0;
 }
 
 .footer-content {
