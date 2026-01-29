@@ -826,22 +826,23 @@ footer {
 }
 
 .social-icons a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.92);
     margin-right: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .social-icons a:hover {
-    background-color: #E60000;
-    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.10);
+    transform: translateY(-2px);
 }
 
 .social-links a:hover {
