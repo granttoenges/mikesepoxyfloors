@@ -250,7 +250,11 @@ nav ul li a:hover::after {
         radial-gradient(1200px 600px at 20% 20%, rgba(255, 255, 255, 0.12), transparent 60%),
         radial-gradient(900px 500px at 70% 30%, rgba(230, 0, 0, 0.18), transparent 55%),
         linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
-        url('../images/image0.jpeg') no-repeat center center/cover;
+        image-set(
+            url('../images/optimized/hero-1200.jpg') 1x,
+            url('../images/optimized/hero-2000.jpg') 2x,
+            url('../images/optimized/hero-3000.jpg') 3x
+        ) no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
