@@ -201,14 +201,15 @@ nav ul li a::after {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #E60000;
-    bottom: -5px;
-    left: 0;
-    transition: width 0.3s ease;
+    background-color: var(--accent);
+    bottom: 2px;
+    left: 12px;
+    transition: width 0.25s ease;
+    border-radius: 2px;
 }
 
 nav ul li a:hover::after {
-    width: 100%;
+    width: calc(100% - 24px);
 }
 
 .mobile-menu-btn {
