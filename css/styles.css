@@ -367,16 +367,17 @@ nav ul li a:hover::after {
     gap: 30px;
 }
 .service-card {
-    background-color: white;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
 }
 
 .service-img {
