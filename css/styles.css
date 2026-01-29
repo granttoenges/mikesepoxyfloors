@@ -183,15 +183,17 @@ nav ul li {
 nav ul li a {
     font-weight: 600;
     position: relative;
-    transition: color 0.3s ease;
-    font-size: 1.2rem;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    font-size: 0.95rem;
     white-space: nowrap;
-    color: #E60000;
-    font-weight: bold;
+    color: var(--text);
+    padding: 10px 12px;
+    border-radius: 999px;
 }
 
 nav ul li a:hover {
-    color: #CC0000;
+    color: var(--text);
+    background-color: rgba(0, 0, 0, 0.04);
 }
 
 nav ul li a::after {
