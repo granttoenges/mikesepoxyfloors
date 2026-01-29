@@ -425,7 +425,7 @@ nav ul li a:hover::after {
 
 /* Benefits Section Styles */
 .benefits {
-    background-color: white;
+    background: #fff;
 }
 
 /* About Section Styles */
