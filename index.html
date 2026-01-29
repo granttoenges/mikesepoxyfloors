@@ -301,7 +301,11 @@
             duration: 450,
             once: true,
             easing: 'ease-out-cubic',
-            offset: 60
+            offset: 60,
+            disable: function () {
+                return window.matchMedia('(max-width: 900px)').matches ||
+                    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            }
         });
     </script>
 </body>
