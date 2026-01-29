@@ -231,11 +231,13 @@ nav ul li a:hover::after {
 .mobile-menu-btn {
     display: none;
     cursor: pointer;
-    background: none;
-    border: none;
-    color: #CC0000;
-    font-size: 1.5rem;
-    margin-left: 20px;
+    background: rgba(0,0,0,0.04);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 1.1rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
 }
 
 /* Hero Section Styles */
