@@ -80,26 +80,30 @@ img {
 }
 
 section {
-    padding: 80px 0;
+    padding: 84px 0;
 }
+
 .section-title {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     position: relative;
-    font-size: 2.5rem;
-    color: #E60000;
+    font-size: clamp(1.9rem, 2.2vw, 2.4rem);
+    color: var(--text);
     display: inline-block;
     width: 100%;
+    letter-spacing: -0.02em;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    width: 70%;
+    width: 92px;
     height: 3px;
-    background-color: #E60000;
-    bottom: -10px;
-    left: 15%;
+    background: linear-gradient(90deg, var(--accent), rgba(230,0,0,0));
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 99px;
 }
 
 /* Header Styles */
