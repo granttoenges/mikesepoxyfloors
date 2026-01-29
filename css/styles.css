@@ -57,12 +57,10 @@ img {
     height: 100%;
     object-fit: cover;
     transition: transform 0.28s ease-out;
-    will-change: transform;
-    transform: translateZ(0);
 }
 
 .gallery-item:hover img {
-    transform: translateZ(0) scale(1.04);
+    transform: scale(1.04);
 }
 
 .container {
@@ -131,7 +129,32 @@ header {
     top: 0;
     z-index: 1000;
     padding: 10px 0;
-    will-change: transform;
+}
+
+@media (max-width: 900px) {
+    header {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: rgba(255, 255, 255, 0.95);
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        background:
+            linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+            url('../images/optimized/hero-1200.jpg') no-repeat center center/cover;
+    }
+
+    .gallery-item {
+        box-shadow: none;
+    }
+
+    .service-card,
+    .benefit-item,
+    .testimonial-card {
+        box-shadow: none;
+    }
 }
 
 .header-container {
@@ -250,7 +273,11 @@ nav ul li a:hover::after {
         radial-gradient(1200px 600px at 20% 20%, rgba(255, 255, 255, 0.12), transparent 60%),
         radial-gradient(900px 500px at 70% 30%, rgba(230, 0, 0, 0.18), transparent 55%),
         linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
-        url('../images/image0.jpeg') no-repeat center center/cover;
+        image-set(
+            url('../images/optimized/hero-1200.jpg') 1x,
+            url('../images/optimized/hero-2000.jpg') 2x,
+            url('../images/optimized/hero-3000.jpg') 3x
+        ) no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
