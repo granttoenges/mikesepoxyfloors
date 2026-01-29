@@ -541,10 +541,10 @@ nav ul li a:hover::after {
     box-shadow: var(--shadow);
 }
 
-.benefit-icon {
-    font-size: 3rem;
-    color: #E60000;
-    margin-bottom: 20px;
+.benefit-item i {
+    font-size: 1.35rem;
+    color: var(--accent);
+    margin-bottom: 14px;
 }
 
 .benefit-item h3 {
