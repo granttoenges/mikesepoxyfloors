@@ -553,7 +553,7 @@ nav ul li a:hover::after {
 }
 
 .benefit-item p {
-    color: #000000;
+    color: var(--muted);
 }
 
 /* Gallery Section Styles */
