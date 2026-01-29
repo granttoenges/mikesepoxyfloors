@@ -580,16 +580,17 @@ nav ul li a:hover::after {
     opacity: 1;
 }
 .gallery-overlay span {
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 10px 20px;
-    border: 2px solid white;
-    border-radius: 4px;
-    transform: scale(0.8);
-    transition: transform 0.3s ease;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: none;
+    letter-spacing: 0;
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.28);
+    transform: translateY(10px);
+    transition: transform 0.25s ease;
 }
 
 .gallery-overlay span h3 {
