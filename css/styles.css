@@ -351,10 +351,10 @@ nav ul li a:hover::after {
 }
 
 .hero-tagline {
-    font-size: 1.3rem;
-    font-style: italic;
+    font-size: 1.05rem;
+    font-style: normal;
     margin-bottom: 30px;
-    color: #ddd;
+    color: rgba(255,255,255,0.82);
 }
 
 /* Hero button styling kept for potential future use */
