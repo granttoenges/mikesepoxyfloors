@@ -13,7 +13,7 @@
     <link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon.jpg">
     <link rel="icon" type="image/jpeg" sizes="16x16" href="images/favicon.jpg">
     <link rel="apple-touch-icon" href="images/favicon.jpg">
-    <meta name="theme-color" content="#cc0000">
+    <meta name="theme-color" content="#111112">
     <link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet'>
     <!-- EmailJS Integration -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -297,8 +297,10 @@
     <script src='https://unpkg.com/aos@2.3.1/dist/aos.js'></script>
     <script>
         AOS.init({
-            duration: 0,
-            once: true
+            duration: 450,
+            once: true,
+            easing: 'ease-out-cubic',
+            offset: 60
         });
     </script>
 </body>
