@@ -143,13 +143,13 @@ header {
     transform: translateY(-2px);
 }
 .header-logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 8px;
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
     object-fit: cover;
-    border: 2px solid #E60000;
-    box-shadow: 0 4px 8px rgba(230, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .logo:hover .header-logo {
