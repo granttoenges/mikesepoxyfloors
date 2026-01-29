@@ -600,7 +600,7 @@ nav ul li a:hover::after {
 }
 
 .gallery-item:hover .gallery-overlay span {
-    transform: scale(1);
+    transform: translateY(0);
 }
 
 /* Testimonials Section Styles */
