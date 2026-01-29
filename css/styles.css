@@ -506,13 +506,13 @@ nav ul li a:hover::after {
 }
 
 .about-paragraph {
-    margin-bottom: 25px;
-    font-size: 1.1rem;
+    margin-bottom: 22px;
+    font-size: 1.05rem;
     line-height: 1.8;
-    color: #000000;
+    color: var(--text);
     position: relative;
-    padding-left: 20px;
-    border-left: 3px solid #E60000;
+    padding-left: 18px;
+    border-left: 3px solid rgba(230, 0, 0, 0.35);
 }
 
 .about-paragraph:last-child {
