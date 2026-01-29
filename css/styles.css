@@ -558,7 +558,7 @@ nav ul li a:hover::after {
 
 /* Gallery Section Styles */
 .gallery {
-    background-color: #f9f9f9;
+    background: var(--surface);
 }
 
 .gallery-grid {
