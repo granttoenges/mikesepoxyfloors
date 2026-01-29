@@ -326,10 +326,11 @@ nav ul li a:hover::after {
 }
 
 .hero-content h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin-bottom: 16px;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    text-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
 }
 
 .highlight {
