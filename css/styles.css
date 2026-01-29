@@ -406,7 +406,7 @@ nav ul li a:hover::after {
 
 /* About Section Styles */
 .about {
-    background-color: #f9f9f9;
+    background: linear-gradient(180deg, var(--surface), #fff);
     position: relative;
 }
 
