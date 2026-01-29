@@ -450,13 +450,22 @@ nav ul li a:hover::after {
 .about-contact-form textarea,
 .about-contact-form select {
     width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-    color: #333;
-    font-size: 1rem;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: rgba(245, 245, 247, 0.8);
+    color: var(--text);
+    font-size: 0.98rem;
+    outline: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.about-contact-form input:focus,
+.about-contact-form textarea:focus,
+.about-contact-form select:focus {
+    border-color: rgba(230, 0, 0, 0.35);
+    box-shadow: 0 0 0 4px rgba(230, 0, 0, 0.12);
 }
 
 .about-contact-form textarea {
